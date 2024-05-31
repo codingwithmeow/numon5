@@ -2,12 +2,30 @@
 @import url("../webfonts/Geometry/stylesheet.css");
 
 body {
-	padding-left: 50px;
-	padding-right: 50px;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	font-family: Verdana;
+	
+}
+
+img {
+	margin-left: 5px;
+	margin-right: 15px;
+}
+
+#accordion1{
+	margin-left: 50px;
+	margin-right: 70px;
+	
 }
 
 .card {
+  border: none; /* Card kenarlıklarını kaldır */
+  border-radius: 0; /* Köşe yuvarlamalarını kaldır */
+}
+
+.card.side-page {
 	 border: none;
      padding: 20px;
 	 display: flex;
@@ -16,15 +34,9 @@ body {
 	 text-align: center;
 } 
 
-.container {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;	
-}
-
 .container-fluid {
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -35,48 +47,114 @@ span {
     font-family: Geometry;
 }
 
-.row {
-    align-items: center;
-}
-
 h1 {
     color: #901E5F;
     font-weight: bold;	
 }
 
-.container {
-	margin-top: 20px;
-	margin-bottom: 20px;
+.no-link-style {
+  color: inherit;
+  text-decoration: none;
 }
 
-li {
+.no-link-style:hover {
+  color: aliceblue;
+  text-decoration: none;
+   
+}
+
+video::cue(.bg_black) {
+    background-color: black;
+	font-size: 20px;
+}
+
+video::cue(.f_size) {
+	font-size: 20px;
+}
+
+.responsive-video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-body {
+	border: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-header {
+	
+  background-color: #f8f9fa; 
+  border-bottom: 2px solid #dee2e6; 
+  padding: 10px 20px;
+  transition: none !important; 
+}
+
+.card-header:hover {
+  background-color: #901E5F;
+	color: aliceblue;
+	
+}
+
+.btn {
 	text-align: left;
 }
 
-ol li img {
-	margin: 10px;
-	padding: 5px;
-}
-
-.text-y {
-    color: #E8B767;
-}
-
-.text-p {
-    color: #901E5F;
-}
-
-.card-text img {
-	margin: 10px;
-	padding: 10px;
+.main-h1 {
+	text-align: center;
 }
 
 @media screen and (max-width:768px){
 	body{
 		font-size: 12px;
+		margin: 5px;
+		padding: 5px;
 	}
 	h1 {
 		font-size: 20px;
 	}
-}
 	
+	video::cue(.bg_black) {
+    background-color: black;
+	font-size: 15px;
+}
+
+	video::cue(.f_size) {
+		font-size: 15px;
+	}
+	
+	
+}
+
+@media screen and (max-width:370px){
+	body{
+		font-size: 12px;
+		margin: 5px;
+		padding: 5px;
+	}
+	h1 {
+		font-size: 20px;
+	}
+	
+	video::cue(.bg_black) {
+    background-color: black;
+    font-size: 7px;
+	}
+
+	video::cue(.f_size) {
+		font-size: 7px;
+	}
+}
+
